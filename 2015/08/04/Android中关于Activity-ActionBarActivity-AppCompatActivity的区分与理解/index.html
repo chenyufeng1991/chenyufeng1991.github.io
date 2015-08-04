@@ -20,7 +20,7 @@
 <meta property="og:description" content="之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
    先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compil">
 <meta property="og:image" content="http://7xkvnc.com1.z0.glb.clouddn.com/1.png">
-<meta property="og:updated_time" content="2015-08-04T06:41:57.000Z">
+<meta property="og:updated_time" content="2015-08-04T06:50:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解">
 <meta name="twitter:description" content="之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
@@ -97,13 +97,6 @@
 </header>
 	<div class="article-content">
 		
-		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
-		
-			
-		
-		</div>
-		
 		<p>之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。</p>
 <p>   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compile With选择API19：Android 4.4(KitKat)，新建完成后，MainActivity 自动继承自Activity。以下是程序运行后的截图：</p>
 <p><img src="http://7xkvnc.com1.z0.glb.clouddn.com/1.png" alt="image"></p>
@@ -145,13 +138,6 @@
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
- 
- 
- 
-  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -282,8 +268,6 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
-      
-      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
