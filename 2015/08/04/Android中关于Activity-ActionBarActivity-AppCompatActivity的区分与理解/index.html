@@ -11,23 +11,26 @@
     
 
     
-    <meta name="description" content="之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
-   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compil">
+    <meta name="description" content="title： Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解
+   之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
+   先说Eclipse。先新建项目，其中Minimum R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="陈宇峰主页">
 <meta property="og:url" content="http://www.chenyufengweb.com/2015/08/04/Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解/index.html">
 <meta property="og:site_name" content="陈宇峰主页">
-<meta property="og:description" content="之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
-   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compil">
+<meta property="og:description" content="title： Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解
+   之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
+   先说Eclipse。先新建项目，其中Minimum R">
 <meta property="og:image" content="http://www.chenyufengweb.com/Users/chenyufeng/Pictures/com.tencent.ScreenCapture/100.png">
 <meta property="og:image" content="http://www.chenyufengweb.com/Users/chenyufeng/Pictures/com.tencent.ScreenCapture/101.png">
 <meta property="og:image" content="http://www.chenyufengweb.com/Users/chenyufeng/Pictures/com.tencent.ScreenCapture/102.png">
 <meta property="og:image" content="http://www.chenyufengweb.com/Users/chenyufeng/Pictures/com.tencent.ScreenCapture/103.png">
-<meta property="og:updated_time" content="2015-08-04T04:26:15.000Z">
+<meta property="og:updated_time" content="2015-08-04T05:05:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="陈宇峰主页">
-<meta name="twitter:description" content="之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
-   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compil">
+<meta name="twitter:description" content="title： Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解
+   之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
+   先说Eclipse。先新建项目，其中Minimum R">
 
     
     <link rel="alternative" href="/atom.xml" title="陈宇峰主页" type="application/atom+xml">
@@ -94,7 +97,7 @@
 		<a href="/about" title="chenyufeng" target="_blank" itemprop="author">chenyufeng</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-04T04:26:15.000Z" itemprop="datePublished"> 发表于 2015-08-04</time>
+    <time datetime="2015-08-04T05:05:52.000Z" itemprop="datePublished"> 发表于 2015-08-04</time>
     
   </p>
 </header>
@@ -107,7 +110,8 @@
 		
 		</div>
 		
-		<p>   之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。</p>
+		<p>title： Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解</p>
+<p>   之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。</p>
 <p>   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compile With选择API19：Android 4.4(KitKat)，新建完成后，MainActivity 自动继承自Activity。以下是程序运行后的截图：</p>
 <p><img src="/Users/chenyufeng/Pictures/com.tencent.ScreenCapture/100.png" alt="Alt text"></p>
 <p>   可以发现，在主界面顶端会出现ActionBar，显示当前Activity的名称AndroidTest。这是Eclipse的情况，下面看一下Android Studio中的情况。</p>
@@ -174,6 +178,17 @@
   
 
   
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/标签/" title="标签">标签<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
 
   <div class="linkslist">
   <p class="asidetitle">友情链接</p>
