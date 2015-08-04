@@ -12,19 +12,22 @@
 
     
     <meta name="description" content="之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
-   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compil">
+
+先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compile">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解">
 <meta property="og:url" content="http://www.chenyufengweb.com/2015/08/04/Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解/index.html">
 <meta property="og:site_name" content="陈宇峰主页">
 <meta property="og:description" content="之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
-   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compil">
+
+先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compile">
 <meta property="og:image" content="http://7xkvnc.com1.z0.glb.clouddn.com/1.png">
-<meta property="og:updated_time" content="2015-08-04T06:50:29.000Z">
+<meta property="og:updated_time" content="2015-08-04T07:36:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android中关于Activity-ActionBarActivity-AppCompatActivity的区分与理解">
 <meta name="twitter:description" content="之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
-   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compil">
+
+先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compile">
 
     
     <link rel="alternative" href="/atom.xml" title="陈宇峰主页" type="application/atom+xml">
@@ -97,16 +100,28 @@
 </header>
 	<div class="article-content">
 		
-		<p>之前一直用Eclipse写Android，最近换到了Android Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。</p>
-<p>   先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :Android 4.0,(Icecream Sandwich)，Target SDK和Compile With选择API19：Android 4.4(KitKat)，新建完成后，MainActivity 自动继承自Activity。以下是程序运行后的截图：</p>
-<p><img src="http://7xkvnc.com1.z0.glb.clouddn.com/1.png" alt="image"></p>
-<p>   可以发现，在主界面顶端会出现ActionBar，显示当前Activity的名称AndroidTest。这是Eclipse的情况，下面看一下Android Studio中的情况。</p>
-<p>   在Android Studio中先新建一个Project，Application name为AndroidTest，然后在platform和SDK中选择Phone And Tablet.Minimum SDK选择API 14：Android 4.0(IceCreamSandwich),新建完成后，自动会在Project中新建一个Module,名称为app.此时可以发现MainActivity是默认继承自ActionBarActivity.并且在ActionBarActivity上有一条删除线，表现该ActionBarActivity已经禁用了，查看提示会发现现：“android.support.v7.app.ActionBarActivity is deprecated”.表示已经被禁用。以下是程序运行后的截图：</p>
-<p>   可以发现在顶端还是会出现ActionBar，默认显示项目名称AndroidTest.与Eclipse中的项目没有任何区别，只是MainActivity继承的父类分别是Activity和ActionBarActivity而已。</p>
-<p>   由于Android开发中一个Class的禁用总会让人不爽，下面将AS中继承的ActionBarActivity手动改成Activity.并导入对应的包，程序运行后的截图如图：</p>
-<p>   可以发现顶端的ActionBar不见了。这就和Eclipse中完全不同了。同样是继承自Activity，界面UI却不同。这也是Eclipse和AS开发Android项目的区别之一。<br>   如果要在AS中也使用ActionBar，并且不使用已经的禁用的ActionBarActivity，有什么办法呢？就是使用AppCompatActivity.在AS中把MainActivity继承自AppCompatActivity，并导入对应的包，程序运行后截图：</p>
-<p>   可以发现我们可爱的ActionBar又出现了。并且AppCompatActivity并没有禁用。<br>   以后在我们的项目中，可以通过手动修改Activity的继承父类，来决定是否显示ActionBar。并且对程序没有其他影响。同样的代码在Eclipseh和Android Studio中会出现较大差异，需要区别对待。</p>
-  
+		<pre><code>之前一直用Eclipse写<span class="keyword">Android，最近换到了Android </span>Studio，因为毕竟是Google推荐的，也是未来的大势所趋，在使用过程中，遇到一些关于Activity的问题，下面来讨论下。
+
+先说Eclipse。先新建项目，其中Minimum Required  SDK 选择API14 :<span class="keyword">Android </span><span class="number">4</span>.<span class="number">0</span>,(Icecream Sandwich)，Target SDK和Compile With选择API19：<span class="keyword">Android </span><span class="number">4</span>.<span class="number">4</span>(KitKat)，新建完成后，MainActivity 自动继承自Activity。以下是程序运行后的截图：
+</code></pre><p><img src="http://7xkvnc.com1.z0.glb.clouddn.com/1.png" alt="image"></p>
+<pre><code>可以发现，在主界面顶端会出现ActionBar，显示当前Activity的名称<span class="keyword">AndroidTest。这是Eclipse的情况，下面看一下Android </span>Studio中的情况。
+
+在<span class="keyword">Android </span>Studio中先新建一个Project，Application name为<span class="keyword">AndroidTest，然后在platform和SDK中选择Phone </span><span class="keyword">And </span>Tablet.Minimum SDK选择API <span class="number">14</span>：<span class="keyword">Android </span><span class="number">4</span>.<span class="number">0</span>(IceCreamSandwich),新建完成后，自动会在Project中新建一个Module,名称为app.此时可以发现MainActivity是默认继承自ActionBarActivity.并且在ActionBarActivity上有一条删除线，表现该ActionBarActivity已经禁用了，查看提示会发现现：“<span class="keyword">android.support.v7.app.ActionBarActivity </span>is deprecated”.表示已经被禁用。以下是程序运行后的截图：
+
+
+可以发现在顶端还是会出现ActionBar，默认显示项目名称<span class="keyword">AndroidTest.与Eclipse中的项目没有任何区别，只是MainActivity继承的父类分别是Activity和ActionBarActivity而已。
+</span>
+由于<span class="keyword">Android开发中一个Class的禁用总会让人不爽，下面将AS中继承的ActionBarActivity手动改成Activity.并导入对应的包，程序运行后的截图如图：
+</span>
+
+
+可以发现顶端的ActionBar不见了。这就和Eclipse中完全不同了。同样是继承自Activity，界面UI却不同。这也是Eclipse和AS开发<span class="keyword">Android项目的区别之一。
+</span>如果要在AS中也使用ActionBar，并且不使用已经的禁用的ActionBarActivity，有什么办法呢？就是使用AppCompatActivity.在AS中把MainActivity继承自AppCompatActivity，并导入对应的包，程序运行后截图：
+
+
+可以发现我们可爱的ActionBar又出现了。并且AppCompatActivity并没有禁用。
+以后在我们的项目中，可以通过手动修改Activity的继承父类，来决定是否显示ActionBar。并且对程序没有其他影响。同样的代码在Eclipseh和<span class="keyword">Android </span>Studio中会出现较大差异，需要区别对待。
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
